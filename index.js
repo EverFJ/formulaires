@@ -7,9 +7,10 @@ app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-    res.render("home")
-})
+    res.render("login")
+});
+
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`)
-})
+});
