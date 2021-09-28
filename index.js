@@ -16,9 +16,13 @@ app.get("/", (req, res) => {
 app.get("/login", (req, res) => {
     res.render("login")
 });
+app.get("/admin", (req, res) => {
+    res.render("admin")
+});
 
 app.post("/login", (req, res) => {
     console.log(`username : ${req.body.username}, password : ${req.body.password}`)
+    res.redirect("/admin")
 })
 
 app.listen(port, () => {
